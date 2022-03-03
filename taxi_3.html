@@ -162,9 +162,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/taxi_source.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/taxi_3.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -194,23 +194,6 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/azukacchi/notebooks/main?urlpath=tree/taxi_source.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -513,90 +496,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>pandas</p></li>
 <li><p>requests</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nbformat</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nbformat.read<span class="o">?</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
-<span class="s1">code_show=true; </span>
-<span class="s1">function code_toggle() {</span>
-<span class="s1"> if (code_show){</span>
-<span class="s1"> $(&#39;div.input&#39;).hide();</span>
-<span class="s1"> } else {</span>
-<span class="s1"> $(&#39;div.input&#39;).show();</span>
-<span class="s1"> }</span>
-<span class="s1"> code_show = !code_show</span>
-<span class="s1">} </span>
-<span class="s1">$( document ).ready(code_toggle);</span>
-<span class="s1">&lt;/script&gt;</span>
-<span class="s1">The raw code for this IPython notebook is by default hidden for easier reading.</span>
-<span class="s1">To toggle on/off the raw code, click &lt;a href=&quot;javascript:code_toggle()&quot;&gt;here&lt;/a&gt;.&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><script>
-code_show=true; 
-function code_toggle() {
- if (code_show){
- $('div.input').hide();
- } else {
- $('div.input').show();
- }
- code_show = !code_show
-} 
-$( document ).ready(code_toggle);
-</script>
-The raw code for this IPython notebook is by default hidden for easier reading.
-To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>.</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 1: Import the libraries you need</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="c1"># from urllib.request import Request, urlopen, urlretrieve</span>
-<span class="c1"># from urllib.parse import urlencode, urlparse</span>
-<span class="kn">import</span> <span class="nn">json</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_9108</span>\<span class="mf">3978852301.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Step 1: Import the libraries you need</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">requests</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="step-2-visit-the-api-website">
 <h2>Step 2: Visit the API website<a class="headerlink" href="#step-2-visit-the-api-website" title="Permalink to this headline">¶</a></h2>
@@ -654,37 +553,30 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <div class="section" id="this-is-the-expected-output-of-the-api-call-if-you-did-it-correctly">
 <h3>This is the expected output of the API call if you did it correctly<a class="headerlink" href="#this-is-the-expected-output-of-the-api-call-if-you-did-it-correctly" title="Permalink to this headline">¶</a></h3>
 <p><img alt="APICallExpectation.png" src="attachment:APICallExpectation.png" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.data.gov.sg/v1/transport/taxi-availability?&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.data.gov.sg/v1/transport/taxi-availability?&#39;</span>
 <span class="n">mydict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;date_time&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-01-01T00:00:00&#39;</span><span class="p">}</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">mydict</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="c1"># data</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -710,7 +602,6 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     </tr>
   </tbody>
 </table>
-</div></div></div>
 </div>
 </div>
 </div>
@@ -720,12 +611,8 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <p><img alt="JSONtoDataFrame.png" src="attachment:JSONtoDataFrame.png" /></p>
 <p><strong>Hint: Google “turn json response to dataframe”</strong></p>
 <p><strong>Hint 2: Pandas has something useful for you</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 6: Turn the JSON response directly into a DataFrame</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 6: Turn the JSON response directly into a DataFrame</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="step-7-get-the-json-s-features-only">
@@ -735,14 +622,10 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <p><img alt="JSONtoDataFrameCorrectExpectation.png" src="attachment:JSONtoDataFrameCorrectExpectation.png" /></p>
 <p>This is what you’ll see if you turn only the ‘features’ part of the JSON into a DataFrame!</p>
 <p><strong>Hint: Google on ways to get values from dictonaries using keys</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 7a: Declare a new variable that contains only your &#39;features&#39; from the JSON</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 7a: Declare a new variable that contains only your &#39;features&#39; from the JSON</span>
 
 <span class="c1"># Step 7b: Turn it into a DataFrame</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="step-8-dissect-the-api-call-to-get-a-pattern">
@@ -769,16 +652,12 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <p><img alt="DateRangeExpectation.png" src="attachment:DateRangeExpectation.png" /></p>
 <p>This is one possible way to do it, as long as you’ve a set of datetimes in 5-minute intervals it’s fine.</p>
 <p><strong>Hint: Google “generate interval of dates pandas”</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 9: Generate a date range in 5-min intervals</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 9: Generate a date range in 5-min intervals</span>
 <span class="n">date_range_5m</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2019-01-01&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2019-02-01&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;5min&#39;</span><span class="p">)</span>
 <span class="n">date_range_5m</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 00:05:00&#39;,
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 00:05:00&#39;,
                &#39;2019-01-01 00:10:00&#39;, &#39;2019-01-01 00:15:00&#39;,
                &#39;2019-01-01 00:20:00&#39;, &#39;2019-01-01 00:25:00&#39;,
                &#39;2019-01-01 00:30:00&#39;, &#39;2019-01-01 00:35:00&#39;,
@@ -792,37 +671,21 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
               dtype=&#39;datetime64[ns]&#39;, length=8929, freq=&#39;5T&#39;)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># [list(map(int, row.split()[1:])) for row in text.split(&#39;\n&#39;)]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># [list(map(int, row.split()[1:])) for row in text.split(&#39;\n&#39;)]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">date_range_5m</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">date_range_5m</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;2019-01-01&#39;, &#39;00:00:00&#39;, &#39;2019-01-01&#39;, ..., &#39;2019-01-16&#39;,
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>array([[&#39;2019-01-01&#39;, &#39;00:00:00&#39;, &#39;2019-01-01&#39;, ..., &#39;2019-01-16&#39;,
         &#39;11:55:00&#39;, &#39;2019-01-16&#39;],
        [&#39;12:00:00&#39;, &#39;2019-01-16&#39;, &#39;12:05:00&#39;, ..., &#39;23:55:00&#39;,
         &#39;2019-02-01&#39;, &#39;00:00:00&#39;]], dtype=&#39;&lt;U10&#39;)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tanggal_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">date_range_5m</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tanggal_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">date_range_5m</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">jam_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">date_range_5m</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="step-10-generate-a-list-of-datetime-in-proper-format-for-api">
@@ -840,15 +703,11 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 </ol>
 <p>This part is a little tough, but you can do it!</p>
 <p><strong>Hint: Google “concatenate two lists element wise python” </strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date_range_string</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;T&#39;</span><span class="o">+</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tanggal_list</span><span class="p">,</span><span class="n">jam_list</span><span class="p">)]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">date_range_string</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;T&#39;</span><span class="o">+</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">tanggal_list</span><span class="p">,</span><span class="n">jam_list</span><span class="p">)]</span>
 <span class="n">date_range_string</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;2019-01-01T00:00:00&#39;,
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;2019-01-01T00:00:00&#39;,
  &#39;2019-01-01T00:05:00&#39;,
  &#39;2019-01-01T00:10:00&#39;,
  &#39;2019-01-01T00:15:00&#39;,
@@ -859,8 +718,6 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
  &#39;2019-01-01T00:40:00&#39;,
  &#39;2019-01-01T00:45:00&#39;]
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="step-11-make-your-api-calls-for-the-entire-duration-takes-1-2-hours">
@@ -883,9 +740,7 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <p>You’ll see some thing like this.</p>
 <p><strong>Hint: String concatenation is your friend</strong></p>
 <p><strong>Hint 2: Google “combine dataframe in list pandas”</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.data.gov.sg/v1/transport/taxi-availability?&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.data.gov.sg/v1/transport/taxi-availability?&#39;</span>
 <span class="n">df_feature</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
 <span class="n">data_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">tanggal</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">date_range_string</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
@@ -895,34 +750,27 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     <span class="n">data_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]))</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████| 8928/8928 [1:11:18&lt;00:00,  2.09it/s]
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████| 8928/8928 [1:11:18&lt;00:00,  2.09it/s]
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">data_list</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">data_list</span><span class="p">)</span>
 <span class="n">df_taxi</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -984,29 +832,25 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     </tr>
   </tbody>
 </table>
-</div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span> <span class="o">=</span> <span class="n">df_taxi</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;geometry.coordinates&#39;</span><span class="p">:</span><span class="s1">&#39;geometry_coordinates&#39;</span><span class="p">,</span><span class="s1">&#39;geometry.type&#39;</span><span class="p">:</span><span class="s1">&#39;geometry_type&#39;</span><span class="p">,</span><span class="s1">&#39;properties.timestamp&#39;</span><span class="p">:</span><span class="s1">&#39;properties_timestamp&#39;</span><span class="p">,</span><span class="s1">&#39;properties.taxi_count&#39;</span><span class="p">:</span><span class="s1">&#39;properties_taxi_count&#39;</span><span class="p">,</span><span class="s1">&#39;properties.api_info.status&#39;</span><span class="p">:</span><span class="s1">&#39;properties_api_info_status&#39;</span><span class="p">})</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span> <span class="o">=</span> <span class="n">df_taxi</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;geometry.coordinates&#39;</span><span class="p">:</span><span class="s1">&#39;geometry_coordinates&#39;</span><span class="p">,</span><span class="s1">&#39;geometry.type&#39;</span><span class="p">:</span><span class="s1">&#39;geometry_type&#39;</span><span class="p">,</span><span class="s1">&#39;properties.timestamp&#39;</span><span class="p">:</span><span class="s1">&#39;properties_timestamp&#39;</span><span class="p">,</span><span class="s1">&#39;properties.taxi_count&#39;</span><span class="p">:</span><span class="s1">&#39;properties_taxi_count&#39;</span><span class="p">,</span><span class="s1">&#39;properties.api_info.status&#39;</span><span class="p">:</span><span class="s1">&#39;properties_api_info_status&#39;</span><span class="p">})</span>
 <span class="n">df_taxi</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1068,18 +912,11 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     </tr>
   </tbody>
 </table>
-</div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df_taxi.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df_taxi.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># [Use this guide if you&#39;re stuck] Step 11</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># [Use this guide if you&#39;re stuck] Step 11</span>
 <span class="c1"># declare the base URL</span>
 
 <span class="c1"># declare the empty list</span>
@@ -1101,9 +938,8 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     
 
 <span class="c1"># concatenate all of the dataframes you appended into the empty list</span>
+
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="step-12-create-a-new-column-time-in-the-new-dataframe">
@@ -1116,14 +952,10 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <li><p>7 columns</p></li>
 <li><p>8,641 rows</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">date_range_5m</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">date_range_5m</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 00:05:00&#39;,
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 00:05:00&#39;,
                &#39;2019-01-01 00:10:00&#39;, &#39;2019-01-01 00:15:00&#39;,
                &#39;2019-01-01 00:20:00&#39;, &#39;2019-01-01 00:25:00&#39;,
                &#39;2019-01-01 00:30:00&#39;, &#39;2019-01-01 00:35:00&#39;,
@@ -1137,29 +969,24 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
               dtype=&#39;datetime64[ns]&#39;, length=8929, freq=&#39;5T&#39;)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;df_taxi.csv&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;df_taxi.csv&#39;</span><span class="p">)</span>
 <span class="n">df_taxi</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1227,30 +1054,26 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     </tr>
   </tbody>
 </table>
-</div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 12: create the &#39;time&#39; column and assign it with the list from Step 9</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 12: create the &#39;time&#39; column and assign it with the list from Step 9</span>
 <span class="n">df_taxi</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date_range_5m</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">df_taxi</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -1318,19 +1141,12 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
     </tr>
   </tbody>
 </table>
-</div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_taxi</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2019-02-01&#39;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;2019-02-01&#39;
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="step-13-export-your-dataframe-as-csv">
@@ -1339,13 +1155,9 @@ To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>
 <p>You’ve successfully called an API and collected your own data. Now it’s time to export your DataFrame into a CSV format so that you can continue in Part II.</p>
 <p>We don’t need the index to be exported so don’t forget the additional argument.</p>
 <p><strong>Hint: Google “export dataframe to csv”</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 13: Export your DataFrame to CSV</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 13: Export your DataFrame to CSV</span>
 <span class="n">df_taxi</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df_taxi.csv&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="what-s-next">
