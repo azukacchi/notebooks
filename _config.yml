@@ -30,9 +30,6 @@ repository:
 html:
   # use_issues_button: true
   use_repository_button: true
-
-
-  html:
   extra_footer: |
     <p>
     Icon by <a href="https://twitter.com/minumtehtarik">@minumtehtarik</a>
